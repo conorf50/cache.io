@@ -1,5 +1,8 @@
 var mongoose = require('mongoose');
 
+//todo add more fields, photos, google auth etc....
+
+
 var CacheSchema = new mongoose.Schema({
     name: String,
     note: String,

@@ -1,3 +1,10 @@
+
+
+// todo Add an update method
+// todo Add a fuzzy search method
+
+
+
 var caches = require('../models/caches');
 var express = require('express');
 var router = express.Router();
@@ -10,6 +17,9 @@ var Cache = require('../models/caches');
 mongoose.connect('mongodb://localhost:27017/cachesdb');
 
 var db = mongoose.connection;
+
+
+//todo Add more secure auth
 
 db.on('error', function (err) {
     console.log('connection error', err);
@@ -26,7 +36,7 @@ router.findAll = function(req, res) {
 
         res.json(caches);
     });
-}
+};
 
 router.findOne = function(req, res) {
 
@@ -37,14 +47,14 @@ router.findOne = function(req, res) {
         else
             res.json(cache);
     });
-}
+};
 
 
 
 router.addCache = function(req, res) {
 
     var cache = new Cache();
-
+//todo Look up methods of storing photos + google auth data
     cache.name = req.body.name;
     cache.note = req.body.note;
     cache.latitude = req.body.latitude;
@@ -74,6 +84,6 @@ router.deleteCache = function(req, res) {
         else
             res.json({ message: 'Geocache Deleted!'});
     });
-}
+};
 
 module.exports = router;
