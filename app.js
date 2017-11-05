@@ -32,6 +32,8 @@ app.use('/users', users);
 app.get('/caches', caches.findAll);
 app.get('/caches/:id', caches.findOne);
 app.post('/caches', caches.addCache);
+app.put('/caches', caches.updateCache);
+
 app.delete('/caches/:id',caches.deleteCache);
 app.delete('/caches', caches.deleteAllCaches);
 
