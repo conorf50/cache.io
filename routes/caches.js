@@ -2,6 +2,7 @@
 
 // todo Add an update method
 // todo Add a fuzzy search method
+// todo add routes for updating a cache, listing caches and log in log out.
 
 
 
@@ -19,7 +20,7 @@ mongoose.connect('mongodb://localhost:27017/cachesdb');
 var db = mongoose.connection;
 
 
-//todo Add more secure auth
+//todo Add more secure auth (google sign in)
 
 db.on('error', function (err) {
     console.log('connection error', err);
@@ -85,5 +86,19 @@ router.deleteCache = function(req, res) {
             res.json({ message: 'Geocache Deleted!'});
     });
 };
+
+
+router.deleteAllCaches = function(req, res) {
+    /*
+    removes all of the entries in the database
+    Source: https://stackoverflow.com/questions/28139638/how-can-you-remove-all-documents-from-a-collection-with-mongoose
+    */
+    Cache.remove({}, res)
+
+};
+
+
+
+
 
 module.exports = router;

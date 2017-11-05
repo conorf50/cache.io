@@ -8,6 +8,7 @@ var bodyParser = require('body-parser');
 var index = require('./routes/index');
 var users = require('./routes/users');
 var caches = require("./routes/caches");
+var settings = require('./routes/settings');
 
 var app = express();
 
@@ -32,6 +33,8 @@ app.get('/caches', caches.findAll);
 app.get('/caches/:id', caches.findOne);
 app.post('/caches', caches.addCache);
 app.delete('/caches/:id',caches.deleteCache);
+app.delete('/caches/:id', caches.deleteAllCaches);
+
 
 
 // catch 404 and forward to error handler
