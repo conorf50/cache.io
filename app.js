@@ -33,7 +33,7 @@ app.get('/caches', caches.findAll);
 app.get('/caches/:id', caches.findOne);
 app.post('/caches', caches.addCache);
 app.delete('/caches/:id',caches.deleteCache);
-app.delete('/caches/:id', caches.deleteAllCaches);
+app.delete('/caches', caches.deleteAllCaches);
 
 
 

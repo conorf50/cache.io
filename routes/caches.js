@@ -88,15 +88,44 @@ router.deleteCache = function(req, res) {
 };
 
 
-router.deleteAllCaches = function(req, res) {
+router.deleteAllCaches = function(req, res, err) {
     /*
     removes all of the entries in the database
     Source: https://stackoverflow.com/questions/28139638/how-can-you-remove-all-documents-from-a-collection-with-mongoose
+    THIS WILL TERMINATE THE MONGO DB CONNECTION - USE WITH CAUTION
     */
     Cache.remove({}, res)
 
+    if (err)
+        res.send(err);
+    else
+        res.json({ message: 'All Geocaches Deleted!'});
+
 };
 
+router.updateCache = function(req, res) {
+
+    Cache.findById(req.params.id, function(err,cache) {
+        cache.name = req.body.name;
+        cache.note = req.body.note;
+        cache.latitude = req.body.latitude;
+        cache.longitude = req.body.longitude;
+        cache.photo = req.body.photo;
+        cache.rating = req.body.rating;
+        cache.type = req.body.type;
+        cache.contents = req.body.contents;
+
+        console.log('Updating cache: ' + JSON.stringify(cache));
+
+        cache.save(function (err) {
+                if (err)
+                    res.send(err);
+                else
+                    res.json({ message: 'Donation Upvoted!', data: donation });
+            });
+
+    });
+}
 
 
 
