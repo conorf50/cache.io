@@ -1,21 +1,21 @@
-var app = angular.module('DonationWebApp');
+var app = angular.module('GeocacheWebApp');
 
-app.controller('donateController', ['$scope', '$location', '$http', function($scope,$location, $http ) {
+app.controller('cacheController', ['$scope', '$location', '$http', function($scope,$location, $http ) {
     
     $scope.formData = {};
 
-    $scope.message = 'Donate Page!';
+    $scope.message = 'All geocaches';
     $scope.amount = 1000;
     $scope.options = [{ name: "PayPal", id: 0 }, { name: "Direct", id: 1 }];
     $scope.formData.paymentOptions = $scope.options[0];
 
-
-    $scope.addDonation = function(){
+//todo add proper data for adding a geocache
+    $scope.addCache = function(){
         $scope.formData.paymenttype =$scope.formData.paymentOptions.name
-        $http.post('/donations', $scope.formData)
+        $http.post('/caches', $scope.formData)
     .success(function(data) {
-            $scope.donations = data;
-            $location.path('/donations');
+            $scope.caches = data;
+            $location.path('/caches');
 
             console.log(data);
         })

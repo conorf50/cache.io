@@ -1,4 +1,4 @@
-var app = angular.module('DonationWebApp');
+var app = angular.module('GeocacheWebApp');
 
 app.controller('contactController', ['$scope', function($scope) {
     // create a message to display in our view

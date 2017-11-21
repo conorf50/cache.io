@@ -122,7 +122,7 @@ router.updateCache = function(req, res) {
                 if (err)
                     res.send(err);
                 else
-                    res.json({ message: 'Donation Upvoted!', data: donation });
+                    res.json({ message: 'Cache Updated!', data: donation });
             });
 
     });
