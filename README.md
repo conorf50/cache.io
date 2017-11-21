@@ -10,8 +10,9 @@ https://en.wikipedia.org/wiki/Geocaching
 
 ##### App overview
 The app is distributed in the form of a Webstorm project. To start the project, import it into your IDE 
-of choice and run it.
+of choice and run it. Then browse to localhost:3000.
 ~ NOTE: Please ensure that MongoDB is running before you launch the project
+~ NOTE: Also run 'npm-update' after downloading this project for the first time.
 
  
 ##### Routes
@@ -39,6 +40,6 @@ https://stackoverflow.com/questions/28139638/how-can-you-remove-all-documents-fr
 
 https://www.geocaching.com
 
-s
+
 https://en.wikipedia.org/wiki/Geocaching
 

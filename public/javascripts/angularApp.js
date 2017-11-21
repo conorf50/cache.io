@@ -51,7 +51,7 @@ app.config(function($routeProvider) {
 
              // route for the settings page
             .when('/settings', {
-                templateUrl : 'pages/settings.ejs',
+                templateUrl : 'pages/addcache.ejs',
                 controller  : 'settingsController'
             });
     });
