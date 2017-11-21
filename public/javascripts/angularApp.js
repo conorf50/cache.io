@@ -22,7 +22,7 @@ app.config(function($routeProvider) {
             // route for the caches page
             .when('/caches', {
                 templateUrl : 'pages/caches.ejs',
-                controller  : 'cacheController'
+                controller  : 'cachesController'
             })
             //todo create map controller + make map.ejs to suit
 

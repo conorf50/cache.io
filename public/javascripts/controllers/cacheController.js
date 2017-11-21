@@ -9,7 +9,7 @@ app.controller('cacheController', ['$scope', '$location', '$http', function($sco
     $scope.options = [{ name: "PayPal", id: 0 }, { name: "Direct", id: 1 }];
     $scope.formData.paymentOptions = $scope.options[0];
 
-//todo add proper data for adding a geocache
+
     $scope.addCache = function(){
         $scope.formData.paymenttype =$scope.formData.paymentOptions.name
         $http.post('/caches', $scope.formData)
