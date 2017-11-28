@@ -1,8 +1,8 @@
-var app = angular.module('DonationWebApp');
+var app = angular.module('GeocacheWebApp');
 
-app.controller('donationsController', ['$scope','$http', function($scope, $http) {
+app.controller('cachesController', ['$scope','$http', function($scope, $http) {
     // create a message to display in our view
-    $scope.message = 'Donations Page!';
+    $scope.message = 'caches Page!';
     findAll();
 
     function findAll() {
