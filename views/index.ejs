@@ -27,31 +27,32 @@
 
 <!-- NAVBAR -->
 
-<nav class="navbar navbar-inverse navbar-static-top" role="navigation">
-  <div class="container">
-    <div class="navbar-header">
-      <a class="navbar-brand" href="#/"><i class="fa fa-thumb-tack" style="color: white;"></i> cache.io</a>
-    </div>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="#">cache.io</a> <!--TODO change these routes-->
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
 
-    <ul class="nav navbar-nav navbar-right">
-      <div class="navbar-right">
-        <button type="button" class="btn btn-default navbar-btn btn-success">Register</button>
-        <button type="button" class="btn btn-default navbar-btn btn-primary">Log In</button>
-      </div>
-      <!--todo change these routes-->
-      <li><a href="#/"><i class="fa fa-home"></i> Home</a></li>
-      <li><a href="#caches"><i class="fa fa-money"></i> View All Geocaches</a></li>
-      <!-- todo add search controller for a search bar-->
-      <li><a href="#donations"><i class="fa fa-list"></i> Search</a></li>
-      <li><a href="#map"><i class="fa fa-info"></i> Map</a></li>
-      <li><a href="#logout"><i class="fa fa-comment"></i>Logout</a></li>
-
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <form class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    </form>
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
+        <a class="nav-link" href="#caches">View Caches</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#map">Map</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#logout">Logout</a>
+      </li>
 
     </ul>
 
   </div>
 </nav>
-
 
 <!-- MAIN CONTENT AND INJECTED VIEWS -->
 <div id="main">
