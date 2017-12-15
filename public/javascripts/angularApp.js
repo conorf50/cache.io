@@ -5,6 +5,7 @@ app.config(function($routeProvider) {
 
 
         //todo edit main controller + home.ejs to suit
+        //todo change this to welcome.ejs in the future
             // route for the home page
             .when('/', {
                 templateUrl : 'pages/home.ejs',
@@ -15,8 +16,8 @@ app.config(function($routeProvider) {
             //todo edit about controller +  make about.ejs to suit
             // route for the about page
             .when('/login', {
-                templateUrl : 'pages/about.ejs',
-                controller  : 'aboutController'
+                templateUrl : 'pages/login.ejs',
+                controller  : 'loginController'
             })
             //todo make caches controller + create caches.ejs to suit
             // route for the caches page

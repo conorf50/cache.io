@@ -1,7 +1,7 @@
 var app = angular.module('GeocacheWebApp');
 
 
-app.controller('mainController', ['$scope', function($scope) {
+app.controller('homeController', ['$scope', function($scope) {
     // create a message to display in our view
       $scope.message = 'Track your caches!!';
      }
