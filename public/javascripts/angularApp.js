@@ -9,11 +9,11 @@ app.config(function($routeProvider) {
             // route for the home page
             .when('/', {
                 templateUrl : 'pages/home.ejs',
-                controller  : 'mainController'
+                controller  : 'homeController'
             })
 
 
-            //todo edit about controller +  make about.ejs to suit
+            //todo edit about controller +  make map.ejs to suit
             // route for the about page
             .when('/login', {
                 templateUrl : 'pages/login.ejs',
@@ -36,9 +36,10 @@ app.config(function($routeProvider) {
 
             //todo make logout controller + logout.ejs to suit
             // route for the logout page
+            // use the login controller
             .when('/logout', {
                 templateUrl : 'pages/logout.ejs',
-                controller  : 'logoutController'
+                controller  : 'loginController'
             })
 
             //todo make login controller + login.ejs to suit
@@ -47,14 +48,7 @@ app.config(function($routeProvider) {
                 templateUrl : 'pages/login.ejs',
                 controller  : 'loginController'
             })
-
-
-
-             // route for the settings page
-            .when('/settings', {
-                templateUrl : 'pages/addcache.ejs',
-                controller  : 'settingsController'
-            });
+    
     });
 
 
