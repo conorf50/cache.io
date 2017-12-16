@@ -48,7 +48,7 @@ app.config(function($routeProvider) {
                 templateUrl : 'pages/login.ejs',
                 controller  : 'loginController'
             })
-    
+
     });
 
 

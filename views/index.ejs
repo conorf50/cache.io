@@ -11,18 +11,20 @@
   <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.10/angular-route.js"></script>
 
   <script src="/javascripts/angularApp.js"></script>
-  <script src="/javascripts/controllers/mainController.js"></script>
-  <script src="/javascripts/controllers/aboutController.js"></script>
   <script src="/javascripts/controllers/cacheController.js"></script>
   <script src="/javascripts/controllers/cachesController.js"></script>
-  <script src="/javascripts/controllers/contactController.js"></script>
+  <script src="/javascripts/controllers/homeController.js"></script>
+  <script src="/javascripts/controllers/loginController.js"></script>
+  <script src="/javascripts/controllers/mapController.js"></script>
+      <script src="/javascripts/controllers/resultsController.js"></script>
 
 
 
-  <style> .glyphicon-thumbs-up { cursor:pointer } </style>
+
+      <style> .glyphicon-thumbs-up { cursor:pointer } </style>
 </head>
 
-<body ng-controller="mainController">
+<body ng-controller="homeController">
 
 
 
@@ -38,10 +40,10 @@
   </form>
 
   <li class="nav-item">
-    <a class="nav-link active" href="#/caches"><i class="fas fa-map-marker-alt fa-lg"></i>  Your Caches</a>
+    <a class="nav-link active" href="#caches"><i class="fas fa-map-marker-alt fa-lg"></i>  Your Caches</a>
   </li>
   <li class="nav-item">
-    <a class="nav-link" href="#/map"><i class="fas fa-map fa-lg"></i>  Map</a>
+    <a class="nav-link" href="#map"><i class="fas fa-map fa-lg"></i>  Map</a>
   </li>
   <li class="nav-item">
     <a class="nav-link" href="#logout"> <i class="fas fa-sign-out-alt fa-lg"></i> Logout</a> <!--todo add button here-->
