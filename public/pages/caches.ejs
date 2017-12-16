@@ -1,5 +1,5 @@
 <div class="jumbotron text-center">
-	<h1>List All Donations</h1>
+	<h1>List All Geocaches</h1>
 	
 	<p>{{ message }}</p>
 
@@ -8,7 +8,7 @@
 	  <tbody ng-repeat="cache in caches | orderBy:'-upvotes'">
         <tr style="height:55px; font-size:20px; margin-left:20px; margin-right:20px; valign="middle"; >
         	<td>
-            <span class="glyphicon glyphicon-thumbs-up" ng-click="incrementUpvotes(donation._id)"></span>
+            <span class="glyphicon glyphicon-thumbs-up" ng-click="incrementUpvotes(cache._id)"></span>
               {{cache.upvotes}}
              </td>
 

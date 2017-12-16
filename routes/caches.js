@@ -4,8 +4,6 @@
 // todo Add a fuzzy search method
 // todo add routes for updating a cache, listing caches and log in log out.
 
-//silly commit
-
 
 var caches = require('../models/caches');
 var express = require('express');
