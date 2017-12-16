@@ -6,9 +6,9 @@ app.controller('cachesController', ['$scope','$http', function($scope, $http) {
     findAll();
 
     function findAll() {
-        $http.get('/donations')
+        $http.get('/caches')
             .success(function (data) {
-                $scope.donations = data;
+                $scope.caches = data;
                 console.log(data);
             })
             .error(function (data) {
@@ -17,22 +17,22 @@ app.controller('cachesController', ['$scope','$http', function($scope, $http) {
     };
 
     $scope.delete = function(id) {
-        if (confirm("Are you sure you want to delete this Donation?")) {
+        if (confirm("Are you sure you want to delete this Geocache?")) {
             console.log('Deleting id : ' + id);
-            $http.delete('/donations/' + id)
+            $http.delete('/caches/' + id)
                 .success(function (data) {
                     console.log(data)
                     findAll()
                 })
                 .error(function (data) {
-                    console.log('Error deleting donation' + data)
+                    console.log('Error deleting geocache' + data)
                 })
         }
     };
 
 
     $scope.incrementUpvotes = function(id) {
-        $http.put('/donations/' + id + '/votes')
+        $http.put('/caches/' + id + '/votes')
             .success(function (data) {
                 console.log(data)
                 findAll()
@@ -44,10 +44,10 @@ app.controller('cachesController', ['$scope','$http', function($scope, $http) {
     }
 
 
-    $scope.updateDonation = function(id) {
-        $location.path('/donations');
+    $scope.updateGeocache = function(id) {
+        $location.path('/caches');
 
-        $http.put('/donations/' + id + '/votes')
+        $http.put('/caches/' + id + '/votes')
             .success(function (data) {
                 console.log(data)
                 findAll()

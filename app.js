@@ -23,8 +23,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
-// todo Experiment with changing this landing page to one like Entropay for example
-// todo Upgrade to Bootstrap 4 + new jQuery
+
 app.use('/', index);
 app.use('/users', users);
 
