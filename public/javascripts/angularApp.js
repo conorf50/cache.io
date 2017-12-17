@@ -49,6 +49,12 @@ app.config(function($routeProvider) {
                 controller  : 'cacheController'
             })
 
+            // route for the logout page
+            .when('/updatecache', {
+                templateUrl : 'pages/updatecache.ejs',
+                controller  : 'updateCacheController'
+            })
+
 
 });
 
