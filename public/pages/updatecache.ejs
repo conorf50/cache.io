@@ -1,0 +1,68 @@
+
+<div class="jumbotron text-center">
+    <h6>Add geocache</h6>
+
+    <p>{{ message }}</p>
+
+    <div ng-controller="updateCacheController">
+        <div class="col-md-6 col-md-offset-3">
+
+            <form ng-submit="addCache()"
+                  style="margin-top:30px;">
+                <h4>Add a new cache</h4>
+
+
+                <div class="form-group" align="center">
+                    <input type="text"
+                           class="form-control"
+                           placeholder="Name"
+                           ng-model="formData.name"
+                           ng-style="{'width': 300 + 'px'}"></input>
+                </div>
+
+                <div class="form-group" align="center">
+                    <input type="number"
+                           class="form-control"
+                           placeholder="Latitude"
+                           ng-model="formData.latitude"
+                           ng-style="{'width': 150 + 'px'}"></input>
+                </div>
+
+                <div class="form-group" align="center">
+                    <input type="number"
+                           class="form-control"
+                           placeholder="Longitude"
+                           ng-model="formData.longitude"
+                           ng-style="{'width': 150 + 'px'}"></input>
+                </div>
+
+
+
+
+                <div class="form-group" align="center">
+                    <select ng-model="formData.ratingOptions" class="form-control"
+                            ng-show="formData.ratingOptions" ng-options="rating.name for rating in ratings" ng-style="{'width': 100 + 'px'}">
+                    </select>
+                </div>
+
+                <div class="form-group" align="center">
+                    <select ng-model="formData.typeOptions" class="form-control"
+                            ng-show="formData.typeOptions" ng-options="type.name for type in types" ng-style="{'width': 100 + 'px'}">
+                    </select>
+                </div>
+
+
+                <div class="form-group" align="center">
+                    <input type="text"
+                           class="form-control"
+                           placeholder="Contents"
+                           ng-model="formData.contents"
+                           ng-style="{'width': 500 + 'px'}"></input>
+                </div>
+
+
+                <button type="submit" ng-submit="addCache()" class="btn btn-primary">Add</button>
+            </form>
+
+        </div>
+    </div>
