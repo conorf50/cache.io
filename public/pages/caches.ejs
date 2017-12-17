@@ -3,20 +3,28 @@
 	
 	<p>{{ message }}</p>
 
+    <button type="button" class="btn btn-default" ng-click="addCache()">
+        Add a new cache
+    </button>
+
   <div ng-controller="cachesController as list">
 	<table align="center" valign="middle">
 	  <tbody ng-repeat="cache in caches | orderBy:'-upvotes'">
         <tr style="height:55px; font-size:20px; margin-left:20px; margin-right:20px; valign="middle"; >
-        	<td>
-            <span class="glyphicon glyphicon-thumbs-up" ng-click="incrementUpvotes(cache._id)"></span>
-              {{cache.upvotes}}
-             </td>
+        <td>
+            <h6> Name: {{cache.name}}</h6>   <!--- TODO change this to link --->
+        </td>
+        <td>
+            <h6> Rating: {{cache.rating}}</h6>
+        </td>
+        <td>
+            <h6> Type: {{cache.type}}</h6>
+        </td>
+        <td>
+            <h6> Photo: {{cache.photo}}</h6>   <!--- todo change this to link--->
+        </td>
 
-             <td>
-            <span class="glyphicon glyphicon-euro"></span> 
-            {{cache.name}}
-    		</td>
- 			<td>
+        <td>
       
       <span style="height:55px; font-size:20px; margin-left:20px; margin-right:20px; valign="middle";>
 

@@ -1,4 +1,4 @@
-var app = angular.module('GeocacheWebApp', ['ngRoute']);
+var app = angular.module('GeocacheWebApp', ['ngRoute','uiGmapgoogle-maps']);
 
 app.config(function($routeProvider) {
         $routeProvider
@@ -8,16 +8,16 @@ app.config(function($routeProvider) {
         //todo change this to welcome.ejs in the future
             // route for the home page
             .when('/', {
-                templateUrl : 'pages/home.ejs',
-                controller  : 'homeController'
+                templateUrl : 'pages/welcome.ejs',
+                controller  : " "
             })
 
 
             //todo edit about controller +  make map.ejs to suit
-            // route for the about page
+            // route for the login page
             .when('/login', {
                 templateUrl : 'pages/login.ejs',
-                controller  : 'loginController'
+                controller  : " "  // don't need a controller to display page
             })
             //todo make caches controller + create caches.ejs to suit
             // route for the caches page
@@ -38,19 +38,21 @@ app.config(function($routeProvider) {
             // route for the logout page
             // use the login controller
             .when('/logout', {
-                templateUrl : 'pages/logout.ejs',
-                controller  : 'loginController'
-            })
-
-            //todo make login controller + login.ejs to suit
-            // route for the logout page
-            .when('/login', {
                 templateUrl : 'pages/login.ejs',
                 controller  : 'loginController'
             })
 
 
-    });
+
+            //todo make login controller + login.ejs to suit
+            // route for the logout page
+            .when('/addcache', {
+                templateUrl : 'pages/addcache.ejs',
+                controller  : 'addCacheController'
+            })
+
+
+});
 
 
   
