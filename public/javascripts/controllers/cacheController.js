@@ -1,6 +1,6 @@
 var app = angular.module('GeocacheWebApp');
 
-app.controller('cacheController', ['$scope', '$location', '$http', function($scope,$location, $http ) {
+app.controller('cacheController', ['$scope', '$location', '$http','$cacheService', function($scope,$location, $http, $cacheService ) {
 
     $scope.formData = {};
 
