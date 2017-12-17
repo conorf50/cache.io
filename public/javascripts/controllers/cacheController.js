@@ -25,10 +25,10 @@ app.controller('cacheController', ['$scope', '$location', '$http', function($sco
     $scope.latitude = 56;
     $scope.longitude = -7.567;
     $scope.photo = "image.jpg";
-    $scope.ratings = [{ name: "Very Easy", id: 0 }, { name: "Easy", id: 1 }, { name: "Medium", id: 2 }, { name: "Dificult", id: 3 }];
-    $scope.types = [{ name: "Tiny", id: 0 }, { name: "Small", id: 1 }, { name: "Medium", id: 2 }, { name: "Large", id: 3 }];
-    $scope.formData.geocacheType = $scope.type[0];
-    $scope.formData.geocacheRating = $scope.rating[0];
+    $scope.ratingOptions = [{ name: "Very Easy", id: 0 }, { name: "Easy", id: 1 }, { name: "Medium", id: 2 }, { name: "Dificult", id: 3 }];
+    $scope.typeOptions = [{ name: "Tiny", id: 0 }, { name: "Small", id: 1 }, { name: "Medium", id: 2 }, { name: "Large", id: 3 }];
+    $scope.formData.geocacheTypes = $scope.typeOptions[0];
+    $scope.formData.geocacheRatings = $scope.ratingOptions[0];
     $scope.contents = "Random Stuff";
 
 
@@ -36,8 +36,8 @@ app.controller('cacheController', ['$scope', '$location', '$http', function($sco
 
 
     $scope.addCache = function(){
-        $scope.formData.type =$scope.formData.types.name
-        $scope.formData.rating =$scope.formData.ratings.name
+        $scope.formData.type =$scope.formData.typeOptions.name
+        $scope.formData.rating =$scope.formData.ratingOptions.name
 
         $http.post('/caches', $scope.formData)
     .success(function(data) {

@@ -3,7 +3,7 @@
 	
 	<p>{{ message }}</p>
 <!--todo Use cards to display caches -->
-    <a class="btn btn-success my-2 my-sm-0" href="#/addcache"> Add a new cache</a> 
+    <a class="btn btn-success my-2 my-sm-0" href="#/addcache"> Add a new cache</a>
 
 
     <div ng-controller="cachesController as list">
@@ -28,16 +28,11 @@
       <span style="height:55px; font-size:20px; margin-left:20px; margin-right:20px; valign="middle";>
 
       
-      <button type="button" class="btn btn-default" ng-click="delete(cache._id)">
-          <span class="glyphicon glyphicon-remove"></span> Remove 
-        </button>
+
             <!--TODO link and use the add cache page to update an existing cache-->
-        <button type="button" class="btn btn-default" ng-click="updateGeocache(cache)">
-          <span class="glyphicon glyphicon-edit"></span> Edit 
-        </button>
-        </span>    
-             </td>
-    	</tr>
+            <a class="btn btn-outline btn-sm" href="/updateCache"> Edit</a>
+            <a class="btn btn-outline-danger btn-sm" ng-click="delete(cache._id)"> Remove</a>
+
       </tbody>
     </table> 
   </div>

@@ -25,7 +25,7 @@
                    class="form-control"
                    placeholder="Latitude"
                    ng-model="formData.latitude"
-                   ng-style="{'width': 100 + 'px'}"></input>
+                   ng-style="{'width': 150 + 'px'}"></input>
           </div>
 
           <div class="form-group" align="center">
@@ -33,7 +33,7 @@
                    class="form-control"
                    placeholder="Longitude"
                    ng-model="formData.longitude"
-                   ng-style="{'width': 100 + 'px'}"></input>
+                   ng-style="{'width': 150 + 'px'}"></input>
           </div>
 
 
@@ -50,12 +50,14 @@
 
 
           <div class="form-group" align="center">
-            <select ng-model="formData.geocacheRating" class="form-control" ng-show="formData.geocacheRating" ng-options="rating.name for rating in ratings" ng-style="{'width': 100 + 'px'}">
+            <select ng-model="formData.geocacheRating" class="form-control"
+                    ng-show="formData.geocacheRatings" ng-options="rating.name for rating in ratingOptions" ng-style="{'width': 100 + 'px'}">
             </select>
           </div>
 
           <div class="form-group" align="center">
-            <select ng-model="formData.geocacheType" class="form-control" ng-show="formData.geocacheType" ng-options="type.name for type in types" ng-style="{'width': 100 + 'px'}">
+            <select ng-model="formData.geocacheType" class="form-control"
+                    ng-show="formData.geocacheTypes" ng-options="type.name for type in typeOptions" ng-style="{'width': 100 + 'px'}">
             </select>
           </div>
 
