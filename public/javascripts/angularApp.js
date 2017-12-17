@@ -27,8 +27,34 @@ app.service('cacheService', function(){
 
 
 app.config(function($routeProvider) {
-        $routeProvider
 
+    app.service('cacheService', function(){
+
+// Cache service - adapted from donationweb.herokuapp.com
+
+        var cacheService = {
+            _id:"",
+            name: "Test",
+            note: "Note",
+            latitude: 53,
+
+            longitude: -7.89,
+            photo: "",
+            contents: "Stuff",
+
+            rating: "Very Easy",
+            type: "XS",
+            address: '',
+            marker: {},
+            googlephoto:'./images/user.gif'
+        };
+
+        return cacheService;
+    });
+
+
+
+    $routeProvider
 
         //todo edit main controller + home.ejs to suit
         //todo change this to welcome.ejs in the future
@@ -69,13 +95,20 @@ app.config(function($routeProvider) {
 
 
 
-            // route for the logout page
+            // route for the addcache page
             .when('/addcache', {
                 templateUrl : 'pages/addcache.ejs',
                 controller  : 'cacheController'
             })
 
             // route for the logout page
+            .when('/updatecache', {
+                templateUrl : 'pages/updatecache.ejs',
+                controller  : 'updatecacheController'
+            })
+
+
+            // route for the updateCache page
             .when('/updatecache', {
                 templateUrl : 'pages/updatecache.ejs',
                 controller  : 'updateCacheController'
