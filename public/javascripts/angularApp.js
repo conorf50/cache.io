@@ -19,7 +19,7 @@ app.config(function($routeProvider) {
                 templateUrl : 'pages/login.ejs',
                 controller  : " "  // don't need a controller to display page
             })
-            //todo make caches controller + create caches.ejs to suit
+
             // route for the caches page
             .when('/caches', {
                 templateUrl : 'pages/caches.ejs',
@@ -34,7 +34,6 @@ app.config(function($routeProvider) {
                 controller  : 'mapController'
             })
 
-            //todo make logout controller + logout.ejs to suit
             // route for the logout page
             // use the login controller
             .when('/logout', {
@@ -44,7 +43,6 @@ app.config(function($routeProvider) {
 
 
 
-            //todo make login controller + login.ejs to suit
             // route for the logout page
             .when('/addcache', {
                 templateUrl : 'pages/addcache.ejs',

@@ -1,5 +1,5 @@
 <div class="jumbotron text-center">
-  <h6>Add geocache</h6>
+  <h1>Make a Donation</h1>
 
   <p>{{ message }}</p>
 
@@ -9,7 +9,7 @@
 
         <form ng-submit="addCache()"
               style="margin-top:30px;">
-          <h4>Add a new cache</h4>
+          <h3>Add a new geocache</h3>
 
 
           <div class="form-group" align="center">
@@ -17,60 +17,9 @@
                    class="form-control"
                    placeholder="Name"
                    ng-model="formData.name"
-                   ng-style="{'width': 300 + 'px'}"></input>
+                   ng-style="{'width': 100 + 'px'}"></input>
           </div>
-
-          <div class="form-group" align="center">
-            <input type="number"
-                   class="form-control"
-                   placeholder="Latitude"
-                   ng-model="formData.latitude"
-                   ng-style="{'width': 150 + 'px'}"></input>
-          </div>
-
-          <div class="form-group" align="center">
-            <input type="number"
-                   class="form-control"
-                   placeholder="Longitude"
-                   ng-model="formData.longitude"
-                   ng-style="{'width': 150 + 'px'}"></input>
-          </div>
-
-
-          <div class="form-group">
-            <label>Select photo</label>
-
-            <input type="file"
-                   class="form-control"
-                   placeholder="Select File"
-                   ng-model="formData.photo"
-                   ng-style="{'width': 100 + 'px'}">
-
-          </div>
-
-
-          <div class="form-group" align="center">
-            <select ng-model="formData.geocacheRating" class="form-control"
-                    ng-show="formData.geocacheRatings" ng-options="rating.name for rating in ratingOptions" ng-style="{'width': 100 + 'px'}">
-            </select>
-          </div>
-
-          <div class="form-group" align="center">
-            <select ng-model="formData.geocacheType" class="form-control"
-                    ng-show="formData.geocacheTypes" ng-options="type.name for type in typeOptions" ng-style="{'width': 100 + 'px'}">
-            </select>
-          </div>
-
-          <div class="form-group" align="center">
-            <input type="text"
-                   class="form-control"
-                   placeholder="Contents"
-                   ng-model="formData.contents"
-                   ng-style="{'width': 500 + 'px'}"></input>
-          </div>
-
-
-          <button type="submit" class="btn btn-primary">Add</button>
+          <button type="submit" ng-submit="addCache() class="btn btn-primary">Add</button>
         </form>
 
       </div>
