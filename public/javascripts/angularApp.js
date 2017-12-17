@@ -1,5 +1,31 @@
 var app = angular.module('GeocacheWebApp', ['ngRoute','uiGmapgoogle-maps']);
 
+
+app.service('cacheService', function(){
+
+    // Cache service - adapted from donationweb.herokuapp.com
+
+           var cacheService = {
+                   _id:"",
+                    name: "Test",
+                    note: "Note",
+                    latitude: 53,
+
+                        longitude: -7.89,
+                    photo: "",
+                    contents: "Stuff",
+                           rating: "Very Easy",
+                   type: "XS",
+                    address: '',
+                    marker: {},
+                googlephoto:'./images/user.gif'
+            };
+
+    return cacheService;
+});
+
+
+
 app.config(function($routeProvider) {
         $routeProvider
 
