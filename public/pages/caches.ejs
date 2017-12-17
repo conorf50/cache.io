@@ -2,12 +2,11 @@
 	<h1>List All Geocaches</h1>
 	
 	<p>{{ message }}</p>
+<!--todo Use cards to display caches -->
+    <a class="btn btn-success my-2 my-sm-0" href="#/addcache"> Add a new cache</a> 
 
-    <button type="button" class="btn btn-default" ng-click="addCache()">
-        Add a new cache
-    </button>
 
-  <div ng-controller="cachesController as list">
+    <div ng-controller="cachesController as list">
 	<table align="center" valign="middle">
 	  <tbody ng-repeat="cache in caches | orderBy:'-upvotes'">
         <tr style="height:55px; font-size:20px; margin-left:20px; margin-right:20px; valign="middle"; >
@@ -32,6 +31,7 @@
       <button type="button" class="btn btn-default" ng-click="delete(cache._id)">
           <span class="glyphicon glyphicon-remove"></span> Remove 
         </button>
+            <!--TODO link and use the add cache page to update an existing cache-->
         <button type="button" class="btn btn-default" ng-click="updateGeocache(cache)">
           <span class="glyphicon glyphicon-edit"></span> Edit 
         </button>
